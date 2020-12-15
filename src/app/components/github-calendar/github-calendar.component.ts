@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { GithubCalendarService } from 'src/app/shared/services/github-calendar.service';
 
 @Component({
   selector: 'app-github-calendar',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubCalendarComponent implements OnInit {
 
-  constructor() { }
+
+  @ViewChild('dataSvg') dataSvg: ElementRef;
+
+  constructor(private githubCalendarService: GithubCalendarService) { }
 
   ngOnInit(): void {
+    this.getSvg();
+  }
+
+
+  private async getSvg() {
+
+    const user = 'Christianesk'
+    const year = '2020';
+
+    const svg = await this.githubCalendarService.getSvgGithubCalendar(user, year);
+
+    this.dataSvg.nativeElement.innerHTML = svg;
+
   }
 
 }
