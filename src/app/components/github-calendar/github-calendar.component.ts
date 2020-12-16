@@ -10,23 +10,36 @@ import { GithubCalendarService } from 'src/app/shared/services/github-calendar.s
 export class GithubCalendarComponent implements OnInit {
 
 
-  @ViewChild('dataSvg') dataSvg: ElementRef;
+  @ViewChild('dataSvgLight') dataSvgLight: ElementRef;
+
+  @ViewChild('dataSvgDark') dataSvgDark: ElementRef;
+
+  @ViewChild('form')
+  form: any;
 
   constructor(private githubCalendarService: GithubCalendarService) { }
 
   ngOnInit(): void {
-    this.getSvg();
+    this.getSvg('Christianesk','2020');
   }
 
 
-  private async getSvg() {
+  private async getSvg(username: string, year:string) {
 
-    const user = 'Christianesk'
-    const year = '2020';
 
-    const svg = await this.githubCalendarService.getSvgGithubCalendar(user, year);
+    const svg = await this.githubCalendarService.getSvgGithubCalendar(username, year);
 
-    this.dataSvg.nativeElement.innerHTML = svg;
+    this.dataSvgLight.nativeElement.innerHTML = svg;
+
+    this.dataSvgDark.nativeElement.innerHTML = svg;
+  }
+
+
+  showCalendar(){
+
+    let username = this.form.value.username;
+    let year = this.form.value.year;
+    this.getSvg(username,year);
 
   }
 
