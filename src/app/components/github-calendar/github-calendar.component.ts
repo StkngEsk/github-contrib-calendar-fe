@@ -23,6 +23,7 @@ export class GithubCalendarComponent implements OnInit {
   constructor(private githubCalendarService: GithubCalendarService) { }
 
   ngOnInit(): void {
+    //DEFAULT USER
     this.getSvg('Christianesk','2020');
   }
 
