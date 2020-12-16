@@ -9,7 +9,7 @@ export class GithubCalendarService {
 
   constructor(private http: HttpClient) { }
 
-  getSvgGithubCalendar(user:string, year:string):Promise<string>{
-    return  this.http.get(`${URL_API}/${user}/${year}`,{ responseType: 'text'}).toPromise();
+  getSvgGithubCalendar(user:string, year:string){
+    return  this.http.get(`${URL_API}/${user}/${year}`);
   }
 }

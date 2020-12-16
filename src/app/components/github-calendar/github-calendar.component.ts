@@ -17,6 +17,9 @@ export class GithubCalendarComponent implements OnInit {
   @ViewChild('form')
   form: any;
 
+  @ViewChild('txtContribLight') txtContribLight: ElementRef;
+  @ViewChild('txtContribDark') txtContribDark: ElementRef;
+
   constructor(private githubCalendarService: GithubCalendarService) { }
 
   ngOnInit(): void {
@@ -29,9 +32,16 @@ export class GithubCalendarComponent implements OnInit {
 
     const svg = await this.githubCalendarService.getSvgGithubCalendar(username, year);
 
-    this.dataSvgLight.nativeElement.innerHTML = svg;
+    svg.subscribe((res:any)=>{
 
-    this.dataSvgDark.nativeElement.innerHTML = svg;
+      this.txtContribLight.nativeElement.innerHTML = res.textContributions;
+      this.txtContribDark.nativeElement.innerHTML = res.textContributions;
+
+      this.dataSvgLight.nativeElement.innerHTML = res.calendar
+
+      this.dataSvgDark.nativeElement.innerHTML = res.calendar;
+    })
+    
   }
 
 

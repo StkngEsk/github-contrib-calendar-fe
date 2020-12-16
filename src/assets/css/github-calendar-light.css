@@ -4,6 +4,7 @@
 }
 
 .light {
+    background-color: #fff;
     --color-calendar-graph-day-bg: #ebedf0;
     --color-calendar-graph-day-L1-bg: #9be9a8;
     --color-calendar-graph-day-L2-bg: #40c463;
@@ -12,6 +13,3 @@
     --color-text-primary: #24292e;
 }
 
-.light-bg{
-    background-color: #fff;
-}
