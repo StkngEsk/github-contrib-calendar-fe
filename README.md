@@ -24,12 +24,12 @@ Create a `config.ts` file inside the config folder with the following settings:
 
 For `development` environment:
 ```typescript
-export const URL_API = 'http://localhost:3000';
+export const URL_API = 'http://localhost:3000/github-contrib-calendar';
 ```
 
 For `production` environment:
 ```typescript
-export const URL_API = 'https://someone-url-api';
+export const URL_API = 'https://someone-url-api/github-contrib-calendar';
 ```
 
 
