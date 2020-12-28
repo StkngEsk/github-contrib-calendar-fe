@@ -1,6 +1,7 @@
 
 # Github's Contribution Calendar (Frontend)
 This project shows github's contribution calendar.
+
 Here [Demo](https://github-contrib-calendar.web.app/)
 [![](https://firebasestorage.googleapis.com/v0/b/github-contrib-calendar.appspot.com/o/github-contrib-calendar-stkngesk.PNG?alt=media&token=f1c27510-9d7d-48bf-90ac-7c422e99a11d)](https://github-contrib-calendar.web.app/)
 
@@ -17,6 +18,7 @@ $ npm install
 ```
 
 Create a folder and rename it `config` in the project path: `src/app`
+
 Create a `config.ts` file inside the config folder with the following settings:
 
 For `development` environment:
