@@ -39,11 +39,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 
 ### Authors
-* Christian - [christianEsk](https://github.com/Christianesk)
-* Jean - [jeanStkng](https://github.com/jeanstkng)
+* Christian - [christianesk](https://github.com/Christianesk)
+* Jean - [jeanstkng](https://github.com/jeanstkng)
 ## License
 
 [MIT][license] © [Stkngesk][website]
 
 [license]: /LICENSE
-[website]: https://stkngesk
+[website]: https://stkngesk.tech
