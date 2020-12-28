@@ -1,27 +1,46 @@
-# GithubContributionsCalendarFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+# Github's Contribution Calendar (Frontend)
+This project shows github's contribution calendar.
+Here [Demo](https://github-contrib-calendar.web.app/)
+[![](https://firebasestorage.googleapis.com/v0/b/github-contrib-calendar.appspot.com/o/github-contrib-calendar-stkngesk.PNG?alt=media&token=f1c27510-9d7d-48bf-90ac-7c422e99a11d)](https://github-contrib-calendar.web.app/)
 
-## Development server
+### Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Configure server API [Here](https://github.com/StkngEsk/github-contrib-calendar)
 
-## Code scaffolding
+### Installation
+This project was generated with Angular CLI version 9.1.5.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install NPM dependencies
+```sh
+$ npm install
+```
 
-## Build
+Create a folder and rename it `config` in the project path: `src/app`
+Create a `config.ts` file inside the config folder with the following settings:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+For `development` environment:
+```typescript
+export const URL_API = 'http://localhost:3000';
+```
 
-## Running unit tests
+For `production` environment:
+```typescript
+export const URL_API = 'https://someone-url-api';
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running the app
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Authors
+* Christian - [christianEsk](https://github.com/Christianesk)
+* Jean - [jeanStkng](https://github.com/jeanstkng)
+## License
+
+[MIT][license] © [Stkngesk][website]
+
+[license]: /LICENSE
+[website]: https://stkngesk
