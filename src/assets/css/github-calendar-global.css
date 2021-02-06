@@ -1,5 +1,5 @@
 
-rect.day {
+rect.ContributionCalendar-day {
     shape-rendering: geometricPrecision;
     outline: 1px solid var(--color-calendar-graph-day-border);
     outline-offset: -1px;
@@ -7,15 +7,38 @@ rect.day {
     ry: 2;
 }
 
-text.wday {
+
+.ContributionCalendar-label{
     font-size: 9px;
     fill: var(--color-text-primary);
 }
 
-text.month {
-    font-size: 10px;
-    fill: var(--color-text-primary);
+.ContributionCalendar-day[data-level="0"] {
+    fill: var(--color-calendar-graph-day-bg);
 }
+
+.ContributionCalendar-day[data-level="1"] {
+    fill: var(--color-calendar-graph-day-L1-bg);
+}
+
+.ContributionCalendar-day[data-level="2"] {
+    fill: var(--color-calendar-graph-day-L2-bg);
+}
+
+.ContributionCalendar-day[data-level="3"] {
+    fill: var(--color-calendar-graph-day-L3-bg);
+}
+
+.ContributionCalendar-day[data-level="2"] {
+    fill: var(--color-calendar-graph-day-L3-bg);
+}
+
+.width-full{
+    width: 100%!important;
+} 
+.f6{
+    font-size: 12px!important;
+} 
 
 .flex-items-end {
     align-items: flex-end !important;
