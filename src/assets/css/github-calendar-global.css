@@ -8,29 +8,46 @@ rect.ContributionCalendar-day {
 }
 
 
-.ContributionCalendar-label{
-    font-size: 9px;
+.ContributionCalendar-label {
+    padding: .125em .5em .125em 0;
+    font-size: 12px;
+    font-weight: var(--base-text-weight-normal, 400);
+    color: var(--color-text-primary);
+    text-align: left;
     fill: var(--color-text-primary);
 }
 
-.ContributionCalendar-day[data-level="0"] {
+.ContributionCalendar-day, .ContributionCalendar-day[data-level="0"] {
     fill: var(--color-calendar-graph-day-bg);
+    shape-rendering: geometricPrecision;
+    background-color: var(--color-calendar-graph-day-bg);
+    border-radius: 2px;
+    outline: 1px solid var(--color-calendar-graph-day-border);
+    outline-offset: -1px;
 }
 
 .ContributionCalendar-day[data-level="1"] {
     fill: var(--color-calendar-graph-day-L1-bg);
+    background-color: var(--color-calendar-graph-day-L1-bg);
+    outline: 1px solid var(--color-calendar-graph-day-L1-border);
 }
 
 .ContributionCalendar-day[data-level="2"] {
     fill: var(--color-calendar-graph-day-L2-bg);
+    background-color: var(--color-calendar-graph-day-L2-bg);
+    outline: 1px solid var(--color-calendar-graph-day-L2-border);
 }
 
 .ContributionCalendar-day[data-level="3"] {
     fill: var(--color-calendar-graph-day-L3-bg);
+    background-color: var(--color-calendar-graph-day-L3-bg);
+    outline: 1px solid var(--color-calendar-graph-day-L3-border);
 }
 
-.ContributionCalendar-day[data-level="2"] {
-    fill: var(--color-calendar-graph-day-L3-bg);
+.ContributionCalendar-day[data-level="4"] {
+    fill: var(--color-calendar-graph-day-L4-bg);
+    background-color: var(--color-calendar-graph-day-L4-bg);
+    outline: 1px solid var(--color-calendar-graph-day-L4-border);
 }
 
 .width-full{
@@ -39,6 +56,14 @@ rect.ContributionCalendar-day {
 .f6{
     font-size: 12px!important;
 } 
+
+.color-fg-muted {
+    color: var(--fgColor-muted, var(--color-text-secondary)) !important;
+}
+
+.Link--muted {
+    color: var(--color-text-secondary) !important;
+}
 
 .flex-items-end {
     align-items: flex-end !important;
@@ -85,4 +110,20 @@ rect.ContributionCalendar-day {
 
 b{
     color: var(--color-text-primary);
+}
+
+.ContributionCalendar-grid {
+    width: max-content;
+    border-collapse: separate;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    word-wrap: normal;
+    border: 0;
 }

@@ -32,7 +32,7 @@ export class GithubCalendarComponent implements OnInit {
 
 
     const svg = await this.githubCalendarService.getSvgGithubCalendar(username, year);
-
+    
     svg.subscribe((res:any)=>{
 
       this.txtContribLight.nativeElement.innerHTML = res.textContributions;
